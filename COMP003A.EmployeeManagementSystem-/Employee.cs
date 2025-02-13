@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,11 +45,26 @@ namespace COMP003A.EmployeeManagementSystem_
             set { _salary = value; }
         }
 
-        public Employee(string inputFirstName, string inputMiddleName, string inputLastName)
+        public Employee(string inputEmployeeId, string inputFirstName, string inputMiddleName, string inputLastName, double inputSalary)
         {
-            _firstName = inputFirstName;
-            _middleName = inputMiddleName;
-            _lastName = inputLastName;
+            EmployeeId = inputEmployeeId;
+            FirstName = inputFirstName;
+            MiddleName = inputMiddleName;
+            LastName = inputLastName;
+            Salary = inputSalary;
+        }
+
+        public void PrintFullName()
+        {
+            Console.WriteLine($"{FirstName} {MiddleName} {LastName}");
+        }
+
+        public void DisplayEmployeeInfo()
+        {
+            Console.WriteLine($"Employee ID: {EmployeeId}");
+            Console.Write($"Name: ");
+            PrintFullName();
+            Console.WriteLine($"Salary: ${Salary:F2}");
         }
     }
 }

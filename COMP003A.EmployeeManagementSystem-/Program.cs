@@ -8,7 +8,28 @@ namespace COMP003A.EmployeeManagementSystem_
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+
+            Console.Write("Enter Employee ID: ");
+            string userInputEmployeeId = Console.ReadLine();
+
+            Console.Write("Enter first name: ");
+            string userInputFirstName = Console.ReadLine();
+
+            Console.Write("Enter middle name (Press Enter to skip): ");
+            string userInputMiddleName = Console.ReadLine();
+
+            Console.Write("Enter last name: ");
+            string userInputLastName = Console.ReadLine();
+
+            Console.Write("Enter Salsry: ");
+            double userInputSalery = double.Parse(Console.ReadLine());
+
+
+            Employee employee = new Employee(userInputEmployeeId, userInputFirstName, userInputMiddleName, userInputLastName, userInputSalery);
+            Console.WriteLine("\nEmployee Created Succesfully\n");
+            
+
+            employee.DisplayEmployeeInfo();
         }
     }
 }
