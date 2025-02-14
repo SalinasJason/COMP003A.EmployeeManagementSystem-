@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace COMP003A.EmployeeManagementSystem_
 {
-    internal class ITDepartment : Department
+    internal class ITDepartment : Department, IDepartmentOperations
     {
         public ITDepartment(string departmentName)
         {
@@ -16,6 +16,11 @@ namespace COMP003A.EmployeeManagementSystem_
         public override string GetDepartmentDetails()
         {
             return "Manages technical resources and infrastructure.";
+        }
+
+        public void Operate()
+        {
+            Console.WriteLine("Performing IT operations...");
         }
     }
 }

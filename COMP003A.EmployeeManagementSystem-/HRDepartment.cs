@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace COMP003A.EmployeeManagementSystem_
 {
-    internal class HRDepartment : Department
+    internal class HRDepartment : Department, IDepartmentOperations
     {
 
         public HRDepartment(string departmentName)
@@ -17,6 +17,11 @@ namespace COMP003A.EmployeeManagementSystem_
         public override string GetDepartmentDetails()
         {
             return "Handles employee relations and recruitment.";
+        }
+
+        public void Operate()
+        {
+            Console.WriteLine("Performing HR operations...");
         }
     }
 }
