@@ -9,6 +9,12 @@ namespace COMP003A.EmployeeManagementSystem_
         static void Main(string[] args)
         {
 
+            DisplayEmployeeInfo();
+            DisplayDepartmentInfo();
+        }
+
+        static void DisplayEmployeeInfo()
+        {
             Console.Write("Enter Employee ID: ");
             string userInputEmployeeId = Console.ReadLine();
 
@@ -27,9 +33,27 @@ namespace COMP003A.EmployeeManagementSystem_
 
             Employee employee = new Employee(userInputEmployeeId, userInputFirstName, userInputMiddleName, userInputLastName, userInputSalery);
             Console.WriteLine("\nEmployee Created Succesfully\n");
-            
+
 
             employee.DisplayEmployeeInfo();
+
+
         }
+
+        static void DisplayDepartmentInfo()
+        {
+
+            HRDepartment departmentHR = new HRDepartment("Human resources");
+            departmentHR.DisplayDepartmentInfo();
+            Console.WriteLine($"Details: {departmentHR.GetDepartmentDetails()}");
+            departmentHR.Operate();
+
+            ITDepartment departmentIT = new ITDepartment("IT");
+            departmentIT.DisplayDepartmentInfo();
+            Console.WriteLine($"Details: {departmentIT.GetDepartmentDetails()}");
+            departmentIT.Operate();
+        }
+
+
     }
 }

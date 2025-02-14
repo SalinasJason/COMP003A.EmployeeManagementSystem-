@@ -17,7 +17,7 @@ namespace COMP003A.EmployeeManagementSystem_
 
         public void DisplayDepartmentInfo()
         {
-            Console.WriteLine($"{DepartmentName}");
+            Console.WriteLine($"\nDepartment: {DepartmentName}");
         }
     }
 }
