@@ -13,6 +13,9 @@ namespace COMP003A.EmployeeManagementSystem_
             DisplayDepartmentInfo();
         }
 
+        /// <summary>
+        /// Method to Display Employee Information
+        /// </summary>
         static void DisplayEmployeeInfo()
         {
             Console.Write("Enter Employee ID: ");
@@ -40,6 +43,9 @@ namespace COMP003A.EmployeeManagementSystem_
 
         }
 
+        /// <summary>
+        /// Merhod to Display Department Information
+        /// </summary>
         static void DisplayDepartmentInfo()
         {
 

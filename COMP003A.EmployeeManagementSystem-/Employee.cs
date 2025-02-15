@@ -18,12 +18,19 @@ namespace COMP003A.EmployeeManagementSystem_
         private double _salary;
 
         // Properties
+
+        /// <summary>
+        /// Gets the _employeeId
+        /// </summary>
         public string EmployeeId
         {
             get { return _employeeId; }
         
         }
-
+        
+        /// <summary>
+        /// Gets and sets FisrtName. The value cannot be empty or null.
+        /// </summary>
         public string FirstName
         {
             get { return _firstName; }
@@ -31,12 +38,15 @@ namespace COMP003A.EmployeeManagementSystem_
             {
                 if (string.IsNullOrWhiteSpace(value))
                 {
-                    throw ArgumentException();
+                    throw new ArgumentException();
                 }
                 _firstName = value;
             }
         }
 
+        /// <summary>
+        ///  Gets and sets LastName. The value cannot be empty or null.
+        /// </summary>
         public string LastName
         {
             get { return _lastName; }
@@ -49,7 +59,9 @@ namespace COMP003A.EmployeeManagementSystem_
                 _lastName = value;
             }
         }
-
+        /// <summary>
+        ///  Gets and sets MiddleName. The value cannot be null.
+        /// </summary>
         public string MiddleName
         {
             get { return _middleName; } 
@@ -63,12 +75,15 @@ namespace COMP003A.EmployeeManagementSystem_
             }
         }
 
+        /// <summary>
+        ///  Gets and sets Salary. The value cannot be less then zero.
+        /// </summary>
         public double Salary
         {
             get { return _salary; }
             set 
             { 
-                 if (value <= 0)
+                 if (value < 0)
                 {
                     throw new ArgumentException();
                 }
