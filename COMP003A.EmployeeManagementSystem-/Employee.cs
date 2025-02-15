@@ -38,6 +38,7 @@ namespace COMP003A.EmployeeManagementSystem_
             {
                 if (string.IsNullOrWhiteSpace(value))
                 {
+                    Console.WriteLine("First name cannot be empty. Please try again.");
                     throw new ArgumentException();
                 }
                 _firstName = value;
@@ -54,6 +55,7 @@ namespace COMP003A.EmployeeManagementSystem_
 
                 if (string.IsNullOrWhiteSpace(value))
                 {
+                    Console.WriteLine("Last name cannot be empty. Please try again.");
                     throw new ArgumentException();
                 }
                 _lastName = value;
@@ -85,6 +87,7 @@ namespace COMP003A.EmployeeManagementSystem_
             { 
                  if (value < 0)
                 {
+                    Console.WriteLine("Salary cannot be less than 0. Please enter a valid value.");
                     throw new ArgumentException();
                 }
                 _salary = value; 

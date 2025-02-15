@@ -30,11 +30,23 @@ namespace COMP003A.EmployeeManagementSystem_
             Console.Write("Enter last name: ");
             string userInputLastName = Console.ReadLine();
 
-            Console.Write("Enter Salsry: ");
-            double userInputSalery = double.Parse(Console.ReadLine());
+            double userInputSalary;
 
+            while (true)
+            {
+                Console.Write("Enter Salary: ");
+                try
+                {
+                    userInputSalary = double.Parse(Console.ReadLine());
+                    break;
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Salary must be a valid number. Please enter a valid value.");
+                }
+            }
 
-            Employee employee = new Employee(userInputEmployeeId, userInputFirstName, userInputMiddleName, userInputLastName, userInputSalery);
+            Employee employee = new Employee(userInputEmployeeId, userInputFirstName, userInputMiddleName, userInputLastName, userInputSalary);
             Console.WriteLine("\nEmployee Created Succesfully\n");
 
 
