@@ -71,9 +71,13 @@ namespace COMP003A.EmployeeManagementSystem_
             {
                 if (value == null)
                 {
-                    throw new ArgumentException();
+                    _middleName = "";
                 }
-                _middleName = value;
+                else
+                {
+                    _middleName = value;
+                }
+                
             }
         }
 

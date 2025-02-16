@@ -45,14 +45,15 @@ namespace COMP003A.EmployeeManagementSystem_
                     Console.WriteLine("Salary must be a valid number. Please enter a valid value.");
                 }
             }
-
-            Employee employee = new Employee(userInputEmployeeId, userInputFirstName, userInputMiddleName, userInputLastName, userInputSalary);
-            Console.WriteLine("\nEmployee Created Succesfully\n");
-
-
-            employee.DisplayEmployeeInfo();
-
-
+            
+            try
+            {
+                Employee employee = new Employee(userInputEmployeeId, userInputFirstName, userInputMiddleName, userInputLastName, userInputSalary);
+                Console.WriteLine("\nEmployee Created Succesfully\n");
+                employee.DisplayEmployeeInfo();
+            }
+            catch { }
+            
         }
 
         /// <summary>
